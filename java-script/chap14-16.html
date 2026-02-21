@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Array Assignment</title>
+</head>
+<body>
+
+<script>
+
+/* Q1 */
+let studentNames1 = [];
+
+/* Q2 */
+let studentNames2 = new Array();
+
+/* Q3 */
+let stringArray = ["Apple", "Banana", "Mango"];
+console.log("Example String Array:", stringArray);
+
+/* Q4 */
+let numberArray = [10, 20, 30, 40];
+console.log("Number Array Example:", numberArray);
+
+/* Q5 */
+let booleanArray = [true, false, true];
+console.log("Boolean Array Example:", booleanArray);
+
+/* Q6 */
+let mixedArray = ["Ali", 20, true];
+console.log("Mixed Array Example:", mixedArray);
+
+
+/* Q7 */
+let qualifications = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "M.Phil", "PhD"];
+
+document.write("<h3>Academic Qualifications List</h3>");
+
+for(let i=0; i<qualifications.length; i++){
+    document.write((i+1) + ". " + qualifications[i] + "<br>");
+}
+
+
+/* Q8 */
+let studentNames = ["Hooriya", "Zain", "Gufran"];
+let studentScores = [450, 400, 380];
+let totalMarks = 500;
+
+document.write("<h3>Student Performance Result</h3>");
+
+for(let i=0; i<studentNames.length; i++){
+
+    let percentage = (studentScores[i]/totalMarks)*100;
+
+    console.log("Student:", studentNames[i],
+                "Score:", studentScores[i],
+                "Percentage:", percentage.toFixed(2));
+
+    document.write(
+        studentNames[i] +
+        " | Score: " + studentScores[i] +
+        " | Percentage: " + percentage.toFixed(2) + "%<br>"
+    );
+}
+
+
+/* Q9 */
+let colors = ["Red", "Green", "Blue"];
+
+let color1 = prompt("Enter color name to add at the beginning:");
+if(color1){
+    colors.unshift(color1);
+}
+
+let color2 = prompt("Enter color name to add at the end:");
+if(color2){
+    colors.push(color2);
+}
+
+console.log("Updated Color Array:", colors);
+
+document.write("<h3>Color Array List</h3>");
+document.write(colors + "<br>");
+
+
+/* Q10 */
+let scores = [300, 450, 200, 380];
+scores.sort(function(a,b){ return a-b; });
+
+console.log("Sorted Score List:", scores);
+
+document.write("<h3>Sorted Scores (Ascending Order)</h3>");
+document.write(scores + "<br>");
+
+
+/* Q11 */
+let cities = ["Karachi", "Lahore", "Islamabad", "Peshawar"];
+let selectedCities = cities.slice(0,3);
+
+document.write("<h3>Selected City List</h3>");
+document.write(selectedCities + "<br>");
+
+
+/* Q12 */
+var arr = ["This ", " is ", " my ", " cat"];
+
+document.write("<h3>Joined String Result</h3>");
+document.write(arr.join("") + "<br>");
+
+
+/* Q13 FIFO */
+let fifo = [];
+fifo.push("A", "B", "C");
+
+document.write("<h3>Queue Order (FIFO)</h3>");
+console.log("FIFO Array:", fifo);
+
+document.write(fifo.shift() + "<br>");
+document.write(fifo.shift() + "<br>");
+document.write(fifo.shift() + "<br>");
+
+
+/* Q14 LIFO */
+let lifo = [];
+lifo.push("A", "B", "C");
+
+document.write("<h3>Stack Order (LIFO)</h3>");
+console.log("LIFO Array:", lifo);
+
+document.write(lifo.pop() + "<br>");
+document.write(lifo.pop() + "<br>");
+document.write(lifo.pop() + "<br>");
+
+
+/* Q15 */
+let manufacturers = ["Apple", "Samsung", "Oppo", "Google Pixel", "Xiaomi", "Vivo", "HTC"];
+
+document.write("<h3>Mobile Manufacturer Dropdown</h3>");
+document.write("<select>");
+
+for(let i=0; i<manufacturers.length; i++){
+    document.write("<option>" + manufacturers[i] + "</option>");
+}
+
+document.write("</select>");
+
+</script>
+
+</body>
+</html>
