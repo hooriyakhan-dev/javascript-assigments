@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Assignment.arrays_loop</title>
+</head>
+<body>
+
+<script>
+
+/* Q1 */
+let multiArray = [ [] ];
+console.log("Empty multidimensional array:", multiArray);
+
+
+/* Q2 */
+let matrixArray = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+];
+
+console.log("Matrix Array:", matrixArray);
+
+
+/* Q3 Counting 1 to 10 */
+
+document.write("<h3>Counting 1 to 10</h3>");
+
+for(let i=1; i<=10; i++){
+    document.write(i + "<br>");
+}
+
+
+/* Q4 Multiplication Table */
+
+let tableNum = +prompt("Enter table number:");
+let tableLen = +prompt("Enter table length:");
+
+document.write("<h3>Multiplication Table</h3>");
+
+for(let i=1; i<=tableLen; i++){
+    document.write(tableNum + " x " + i + " = " + (tableNum*i) + "<br>");
+}
+
+
+/* Q5 Fruits Array */
+
+let fruits = ["apple","banana","mango","orange","strawberry"];
+
+document.write("<h3>Fruit List</h3>");
+
+for(let i=0; i<fruits.length; i++){
+    document.write(fruits[i] + "<br>");
+}
+
+
+/* Q6 Series */
+
+document.write("<h3>Series Output</h3>");
+
+document.write("Counting: ");
+for(let i=1; i<=15; i++){
+    document.write(i + (i<15 ? ", " : ""));
+}
+
+document.write("<br>Reverse Counting: ");
+for(let i=10; i>=1; i--){
+    document.write(i + (i>1 ? ", " : ""));
+}
+
+document.write("<br>Even: ");
+for(let i=0; i<=20; i+=2){
+    document.write(i + (i<20 ? ", " : ""));
+}
+
+document.write("<br>Odd: ");
+for(let i=1; i<=19; i+=2){
+    document.write(i + (i<19 ? ", " : ""));
+}
+
+document.write("<br>Series: ");
+for(let i=2; i<=20; i+=2){
+    document.write(i + "k" + (i<20 ? ", " : ""));
+}
+
+
+/* Q7 Search Array */
+
+let A = ["cake","apple pie","cookie","chips","patties"];
+
+let search = prompt("Enter item to search:").toLowerCase();
+
+if(A.includes(search)){
+    alert("Yes, " + search + " is found");
+}
+else{
+    alert("Sorry, " + search + " is not found");
+}
+
+
+/* Q8 Largest Number */
+
+let arr1 = [24,53,78,91,12];
+
+let largest = arr1[0];
+
+for(let i=1; i<arr1.length; i++){
+    if(arr1[i] > largest){
+        largest = arr1[i];
+    }
+}
+
+document.write("<h3>Largest Number</h3>");
+document.write(largest);
+
+
+/* Q9 Smallest Number */
+
+let arr2 = [24,53,78,91,12];
+
+let smallest = arr2[0];
+
+for(let i=1; i<arr2.length; i++){
+    if(arr2[i] < smallest){
+        smallest = arr2[i];
+    }
+}
+
+document.write("<h3>Smallest Number</h3>");
+document.write(smallest);
+
+
+/* Q10 Multiples of 5 */
+
+document.write("<h3>Multiples of 5 (1 to 100)</h3>");
+
+for(let i=5; i<=100; i+=5){
+    document.write(i + " ");
+}
+
+</script>
+
+</body>
+</html>
